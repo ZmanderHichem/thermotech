@@ -1,0 +1,90 @@
+.about-us__services {
+  margin: 30px 0; /* Space above and below */
+  text-align: center; /* Center the title */
+}
+
+.services-container {
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center the columns */
+  align-items: flex-start; /* Align items at the top */
+  margin-top: 20px; /* Optional margin */
+}
+
+.services-column {
+  flex: 1; /* Allow columns to take equal space */
+  margin: 0 20px; /* Space between columns */
+}
+
+.vertical-line {
+  width: 2px; /* Width of the vertical line */
+  background-color: #ccc; /* Color of the vertical line */
+  height: auto; /* Adjust height based on content */
+  min-height: 100px; /* Minimum height for the line */
+}
+
+/* Existing styles */
+.about-us {
+  background-color: #f7f7f7;
+  font-family: 'Arial', sans-serif;
+  padding: 40px;
+  color: #333;
+  margin-top: 50px;
+}
+
+.about-us__container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.about-us h1,
+.about-us h2 {
+  color: #003366;
+  text-align: center; /* Ensure titles are centered */
+  margin-bottom: 18px;
+  font-weight: bold;
+}
+
+.about-us__intro {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.about-us__services ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-us__services li {
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+.about-us__mission,
+.about-us__contact {
+  margin-bottom: 30px;
+}
+
+.about-us__mission p,
+.about-us__contact p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.about-us__contact strong {
+  color: #003366;
+}
+.about-us__location {
+  margin-top: 30px; /* Space above the location section */
+  text-align: center; /* Center the content */
+}
+
+.about-us__location iframe {
+  max-width: 100%; /* Make the iframe responsive */
+  height: auto; /* Maintain aspect ratio */
+}

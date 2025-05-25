@@ -1,0 +1,17 @@
+/* lib/Services/Services.css */
+.services-container {
+    padding: 20px;
+    text-align: center;
+    margin: 100px auto 20px auto;
+    max-width: 800px;
+  }
+  
+  h1 {
+    color: #0075FF;
+  }
+  
+  p {
+    color: #555;
+    line-height: 1.6;
+  }
+  

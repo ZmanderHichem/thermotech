@@ -1,0 +1,49 @@
+.gradient-custom {
+  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+  }
+  
+  .card-custom {
+  border-bottom-left-radius: 10% 50%;
+  border-top-left-radius: 10% 50%;
+  background-color: #f8f9fa ;
+  
+  }
+  
+  
+  .input-custom {
+  background-color: white ;
+  width: 100%; /* Chaque champ occupe 100% de la largeur */
+  box-sizing: border-box;
+  }
+  
+  .white-text {
+  color: hsl(52, 0%, 98%);
+  font-weight: 100 ;
+  font-size: 14px;
+  }
+  
+  .back-button {
+  background-color: hsl(52, 0%, 98%);
+  font-weight: 700;
+  color: black ;
+  margin-top: 50px ;
+  }
+  .is-invalid {
+    border: 1px solid red;
+  }
+  @media (max-width: 768px) { /* Ajustez la valeur selon vos besoins */
+    .card-custom {
+      padding: 10px; /* Ajoutez un peu de padding pour le confort */
+    }
+  
+    .back-button {
+      width: 100%; /* Le bouton prend toute la largeur */
+      margin-top: 20px; /* Ajustez si nécessaire */
+    }
+  
+    /* Assurez-vous que les champs prennent toute la ligne */
+    .input-custom {
+      display: block; /* Chaque champ occupe une ligne */
+      margin-bottom: 15px; /* Ajoutez un espace entre les champs */
+    }
+  }
