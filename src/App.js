@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes, Link, Navigate, useLocation } from 'react-router-dom';
-import Home from './lib/home/home';
+import Home from './lib/home/home.jsx';
 import About from './lib/about/AboutUs';
 import Footer from './lib/Footer/Footer';
 import Login from './lib/Login/Login';
