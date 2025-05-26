@@ -7,7 +7,7 @@ import Login from './lib/Login/Login';
 import Register from './lib/Register/Register';
 import RendezVous from './lib/RendezVous/RendezVous';
 import './App.css';  // Import the updated CSS
-import logo from './assets/logo-thermotech.png';
+import logo from './assets/logo123.png';
 import { FaPhoneAlt } from 'react-icons/fa'; // Import the phone icon
 import Services from './lib/services/services';
 import Refrigerateur from './lib/services/refrigerateur/refrigerateur';

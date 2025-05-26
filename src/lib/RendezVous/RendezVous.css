@@ -1,49 +1,162 @@
-.gradient-custom {
-  background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+/* Main Container Styles */
+.rendez-vous-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0075FF, #00428e);
+  padding: 4rem 1rem;
+}
+
+.appointment-card {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.appointment-header {
+  background: linear-gradient(135deg, #0075FF, #00428e);
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.appointment-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.appointment-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Form Styles */
+.appointment-form {
+  padding: 3rem 2rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #0075FF;
+  outline: none;
+}
+
+.form-control.is-invalid {
+  border-color: #dc3545;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Select Styles */
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: white;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M8 11.5l-6-6h12l-6 6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+/* Submit Button */
+.submit-button {
+  background: linear-gradient(135deg, #0075FF, #00428e);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 117, 255, 0.3);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Success Message */
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .appointment-card {
+    border-radius: 10px;
   }
-  
-  .card-custom {
-  border-bottom-left-radius: 10% 50%;
-  border-top-left-radius: 10% 50%;
-  background-color: #f8f9fa ;
-  
+
+  .appointment-title {
+    font-size: 2rem;
   }
-  
-  
-  .input-custom {
-  background-color: white ;
-  width: 100%; /* Chaque champ occupe 100% de la largeur */
-  box-sizing: border-box;
+
+  .appointment-form {
+    padding: 2rem 1rem;
   }
-  
-  .white-text {
-  color: hsl(52, 0%, 98%);
-  font-weight: 100 ;
-  font-size: 14px;
+
+  .form-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .back-button {
-  background-color: hsl(52, 0%, 98%);
-  font-weight: 700;
-  color: black ;
-  margin-top: 50px ;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  .is-invalid {
-    border: 1px solid red;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  @media (max-width: 768px) { /* Ajustez la valeur selon vos besoins */
-    .card-custom {
-      padding: 10px; /* Ajoutez un peu de padding pour le confort */
-    }
-  
-    .back-button {
-      width: 100%; /* Le bouton prend toute la largeur */
-      margin-top: 20px; /* Ajustez si nécessaire */
-    }
-  
-    /* Assurez-vous que les champs prennent toute la ligne */
-    .input-custom {
-      display: block; /* Chaque champ occupe une ligne */
-      margin-bottom: 15px; /* Ajoutez un espace entre les champs */
-    }
-  }
+}
+
+.appointment-card {
+  animation: fadeIn 0.5s ease-out;
+}

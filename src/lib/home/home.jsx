@@ -1,105 +1,151 @@
-// src/Home.js
 import React from 'react';
-import './Home.css'; // Import custom CSS for the Home page
 import { Link } from 'react-router-dom';
-import ReviewForm from './ReviewForm'; // Assurez-vous que le chemin est correct
+import { FaTools, FaClock, FaUserShield, FaArrowRight } from 'react-icons/fa';
+import './Home.css';
+import ReviewForm from './ReviewForm';
 
 const Home = () => {
-  
   return (
-    <div className="home-container">
-      {/* Compartment 1 */}
-      <div className='installation-gif-container'>
-  <img src={require('../../assets/affichethermotech.png')} alt="Installation" className='installation-gif' />
-  <button className='appointment-button' onClick={() => window.location.href = '/rendez-vous'}>Réservez un Rendez-vous</button>
-</div>
-
-  <img src={require('../../assets/separation.png')} alt="Séparation" className='separation' />
-
-
-
-  <img src={require('../../assets/affiche2.png')} alt="Affiche 2" className='affiche2' />
-
-
-<div className="compartment compartment-1">
-  <h2 className="compartment-title title-1">Nos Services</h2>
-  
-  <div className="services-container">
-          <Link to="/services/refrigerateur" className="service-item">
-            <img src={require('../../assets/1.jpg')} alt="Service 1" />
+    <div>
+      <section className="hero-section">
+        <div className="hero-content">
+          <h1 className="hero-title">Votre Expert en Réparation d'Électroménager</h1>
+          <Link to="/rendez-vous" className="cta-button">
+            Prendre Rendez-vous
           </Link>
-          <Link to="/services/machines" className="service-item">
-            <img src={require('../../assets/2.jpg')} alt="Service 2" />
-          </Link>
-          <Link to="/services/climatisation" className="service-item">
-            <img src={require('../../assets/3.jpg')} alt="Service 3" />
-          </Link>
-          <Link to="/services/microonde" className="service-item">
-            <img src={require('../../assets/4.jpg')} alt="Service 4" />
-          </Link>
-  </div>
-</div>
+        </div>
+      </section>
 
-
-      <div className="compartment compartment-2">
-        <h2 className="compartment-title title-2">Entretien et maintenance Climatisation</h2>
-        <div className="compartment-content content-2">
-          <div className="compartment-description description-2">
-            <p>Nous nous occupons de tout, du nettoyage à vapeur aux vérifications essentielles, pour garantir un fonctionnement optimal. Avec notre expertise, nous prenons la relève pour vous offrir
-            un air frais et sain tout au long de l'année. Faites le choix de la tranquillité d'esprit et laissez-nous prendre soin de votre confort !</p>
+      <section className="services-section">
+        <h2 className="section-title">Nos Services</h2>
+        <div className="services-grid">
+          <div className="service-card">
+            <img src={require('../../assets/1.jpg')} alt="Réfrigérateurs" className="service-image" />
+            <div className="service-content">
+              <h3 className="service-title">Réfrigérateurs</h3>
+              <p className="service-description">
+                Réparation et entretien de tous types de réfrigérateurs pour garantir la conservation optimale de vos aliments.
+              </p>
+              <Link to="/services/refrigerateur" className="service-link">
+                En savoir plus <FaArrowRight />
+              </Link>
+            </div>
           </div>
-          <div className="compartment-image image-2">
-            <img src={require('../../assets/entretien.jpg')} alt="Compartment 2" />
+
+          <div className="service-card">
+            <img src={require('../../assets/2.jpg')} alt="Machines à laver" className="service-image" />
+            <div className="service-content">
+              <h3 className="service-title">Machines à laver</h3>
+              <p className="service-description">
+                Installation et réparation professionnelle de machines à laver et lave-vaisselle.
+              </p>
+              <Link to="/services/machines" className="service-link">
+                En savoir plus <FaArrowRight />
+              </Link>
+            </div>
+          </div>
+
+          <div className="service-card">
+            <img src={require('../../assets/3.jpg')} alt="Climatisation" className="service-image" />
+            <div className="service-content">
+              <h3 className="service-title">Climatisation</h3>
+              <p className="service-description">
+                Installation, entretien et réparation de systèmes de climatisation pour votre confort.
+              </p>
+              <Link to="/services/climatisation" className="service-link">
+                En savoir plus <FaArrowRight />
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* Compartment 3 */}
-      <div className="compartment compartment-3">
-        <h2 className="compartment-title title-3">Installation et Réparation de Machines à Laver / Lave-vaisselle / Sèche-linge</h2>
-        <div className="compartment-content content-3">
-        <div className="compartment-image image-3">
-            <img src={require('../../assets/machinereparation.jpg')} alt="Compartment 3" />
-          </div>
-          <div className="compartment-description description-3">
-            <p>Laissez-nous gérer l'installation et la réparation de tous types de 
-            machines ! Que ce soit pour une nouvelle installation ou une réparation rapide, nous intervenons avec expertise et efficacité. Nous prenons en charge chaque étape pour vous assurer un équipement fonctionnel, durable et performant. Ne vous inquiétez plus des pannes, 
-            nous sommes là pour vous offrir des solutions fiables et adaptées à vos besoins.</p>
+      <section className="features-section">
+        <h2 className="section-title">Pourquoi Nous Choisir</h2>
+        <div className="features-grid">
+          <div className="feature-card">
+            <div className="feature-icon">
+              <FaTools />
+            </div>
+            <h3 className="feature-title">Expertise Technique</h3>
+            <p className="feature-description">
+              Nos techniciens sont formés et certifiés pour intervenir sur tous types d'appareils.
+            </p>
           </div>
 
+          <div className="feature-card">
+            <div className="feature-icon">
+              <FaClock />
+            </div>
+            <h3 className="feature-title">Service Rapide</h3>
+            <p className="feature-description">
+              Intervention dans les 24-48h pour minimiser les désagréments.
+            </p>
+          </div>
+
+          <div className="feature-card">
+            <div className="feature-icon">
+              <FaUserShield />
+            </div>
+            <h3 className="feature-title">Garantie Satisfaction</h3>
+            <p className="feature-description">
+              Nous nous engageons à vous offrir un service de qualité et des résultats durables.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
-      {/* Compartment 4 */}
-      <div className="compartment compartment-4">
-        <h2 className="compartment-title title-4">Réparation de Réfrigérateurs</h2>
-        <div className="compartment-content content-4">
-          <div className="compartment-description description-4">
-            <p> 
-            Nous prenons en charge tout le processus de réparation de votre réfrigérateur, assurant une mise en service parfaite et des réparations rapides. Avec notre expertise, nous veillons à ce que votre appareil reste en excellent état, garantissant la fraîcheur de vos aliments. 
-            Ne laissez pas les pannes vous gêner : nous sommes là pour vous offrir un service de qualité et un confort optimal !.</p>
+      <section className="stats-section">
+        <div className="stats-grid">
+          <div className="stat-card">
+            <div className="stat-number">100+</div>
+            <div className="stat-label">Clients Satisfaits</div>
           </div>
-          <div className="compartment-image image-4">
-            <img src={require('../../assets/refregerateur.jpg')} alt="Compartment 4" />
+
+          <div className="stat-card">
+            <div className="stat-number">24/7</div>
+            <div className="stat-label">Service Client</div>
+          </div>
+          <div className="stat-card">
+            <div className="stat-number">100%</div>
+            <div className="stat-label">Satisfaction Garantie</div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="review-compartment">
-        <h2>Donnez votre avis</h2>
-        <ReviewForm /> {/* Ajoutez le composant de formulaire d'avis ici */}
-      </div>
+      <section className="review-section">
+        <h2 className="section-title">Votre Avis Compte</h2>
+        <div className="review-container">
+          <ReviewForm />
+        </div>
+      </section>
+
+      <section className="testimonials-section">
+        <h2 className="section-title">Témoignages Clients</h2>
+        <div className="testimonials-grid">
+          <div className="testimonial-card">
+            <p className="testimonial-content">
+              "Service rapide et professionnel. Mon réfrigérateur fonctionne comme neuf maintenant. Je recommande vivement !"
+            </p>
+            <p className="testimonial-author">- Sarah B.</p>
+          </div>
+
+          <div className="testimonial-card">
+            <p className="testimonial-content">
+              "Excellente expertise technique et service client impeccable. Très satisfait de l'intervention."
+            </p>
+            <p className="testimonial-author">- Mohamed K.</p>
+          </div>
+
+          <div className="testimonial-card">
+            <p className="testimonial-content">
+              "Intervention rapide et efficace sur ma climatisation. Je n'hésiterai pas à faire appel à eux à nouveau."
+            </p>
+            <p className="testimonial-author">- Leila M.</p>
+          </div>
+        </div>
+      </section>
     </div>
-
-  );
-};
-
-// Footer
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <p>© 2022 All rights reserved.</p>
-    </footer>
   );
 };
 
