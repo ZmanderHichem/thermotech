@@ -3,13 +3,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 4rem 1rem;
   background-color: #f5f5f5;
 }
 
 .social-card {
   background: white;
-  padding: 40px;
+  padding: 2.5rem;
   border-radius: 15px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -18,29 +18,30 @@
 }
 
 .logo-container {
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
 }
 
 .social-logo {
-  max-width: 200px;
+  max-width: 180px;
   height: auto;
 }
 
 .bio-text {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #333;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   line-height: 1.6;
 }
 
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .social-icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #333;
   transition: transform 0.3s ease, color 0.3s ease;
   cursor: pointer;
@@ -50,35 +51,34 @@
   transform: scale(1.1);
 }
 
-/* Couleurs spécifiques pour chaque réseau social */
 .social-icons a:nth-child(1) .social-icon:hover {
-  color: #1877f2; /* Facebook */
+  color: #1877f2;
 }
 
 .social-icons a:nth-child(2) .social-icon:hover {
-  color: #e4405f; /* Instagram */
+  color: #e4405f;
 }
 
 .social-icons a:nth-child(3) .social-icon:hover {
-  color: #25d366; /* WhatsApp */
+  color: #25d366;
 }
 
 .social-icons a:nth-child(4) .social-icon:hover {
-  color: #000000; /* TikTok */
+  color: #000000;
 }
 
 .contact-info {
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 0.8rem;
 }
 
 .contact-icon {
@@ -94,5 +94,88 @@
 }
 
 .contact-item a:hover {
-  color: #007bff;
-} 
+  color: #0075FF;
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+  .social-card {
+    padding: 2rem;
+  }
+
+  .social-logo {
+    max-width: 150px;
+  }
+
+  .bio-text {
+    font-size: 1rem;
+  }
+
+  .social-icon {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .social-container {
+    padding: 3rem 1rem;
+  }
+
+  .social-card {
+    padding: 1.5rem;
+  }
+
+  .social-logo {
+    max-width: 120px;
+  }
+
+  .bio-text {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .social-icons {
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    font-size: 1.6rem;
+  }
+
+  .contact-item a {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .social-card {
+    padding: 1.2rem;
+  }
+
+  .social-logo {
+    max-width: 100px;
+  }
+
+  .bio-text {
+    font-size: 0.85rem;
+  }
+
+  .social-icons {
+    gap: 1.2rem;
+  }
+
+  .social-icon {
+    font-size: 1.4rem;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .contact-item a {
+    font-size: 0.9rem;
+  }
+}

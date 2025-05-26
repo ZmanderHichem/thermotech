@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutUs.css';
-import { FaEnvelope, FaPhone, FaClock } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaClock, FaTools, FaShieldAlt, FaCheckCircle } from 'react-icons/fa';
 
 const AboutUs = () => {
   return (
@@ -18,16 +18,19 @@ const AboutUs = () => {
         <section className="about-us__services">
           <div className="services-grid">
             <div className="service-item">
+              <FaTools />
               <h3>Expertise Technique</h3>
               <p>Notre équipe de techniciens certifiés possède une expertise approfondie dans la réparation
                 de tous types d'appareils électroménagers.</p>
             </div>
             <div className="service-item">
-              <h3>Service Rapide</h3>
+              <FaShieldAlt />
+              <h3>Service Garanti</h3>
               <p>Nous comprenons l'importance d'une intervention rapide et nous nous engageons à résoudre
                 vos problèmes dans les plus brefs délais.</p>
             </div>
             <div className="service-item">
+              <FaCheckCircle />
               <h3>Qualité Garantie</h3>
               <p>Nous utilisons exclusivement des pièces d'origine et offrons une garantie sur toutes
                 nos interventions pour votre tranquillité d'esprit.</p>

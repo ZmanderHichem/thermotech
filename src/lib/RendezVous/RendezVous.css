@@ -2,7 +2,7 @@
 .rendez-vous-container {
   min-height: 100vh;
   background: linear-gradient(135deg, #0075FF, #00428e);
-  padding: 4rem 1rem;
+  padding: 6rem 1rem;
 }
 
 .appointment-card {
@@ -77,21 +77,6 @@
   margin-top: 0.25rem;
 }
 
-/* Select Styles */
-.form-select {
-  width: 100%;
-  padding: 0.75rem;
-  border: 2px solid #e1e1e1;
-  border-radius: 8px;
-  font-size: 1rem;
-  background-color: white;
-  cursor: pointer;
-  appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23333' viewBox='0 0 16 16'%3E%3Cpath d='M8 11.5l-6-6h12l-6 6z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 1rem center;
-}
-
 /* Submit Button */
 .submit-button {
   background: linear-gradient(135deg, #0075FF, #00428e);
@@ -126,37 +111,92 @@
   text-align: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .appointment-card {
-    border-radius: 10px;
+/* Tablet Responsive Design */
+@media (max-width: 1024px) {
+  .rendez-vous-container {
+    padding: 5rem 1rem;
   }
 
   .appointment-title {
     font-size: 2rem;
   }
 
+  .appointment-subtitle {
+    font-size: 1.1rem;
+  }
+
   .appointment-form {
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .rendez-vous-container {
+    padding: 4rem 0.5rem;
+  }
+
+  .appointment-card {
+    border-radius: 15px;
+  }
+
+  .appointment-header {
+    padding: 1.5rem;
+  }
+
+  .appointment-title {
+    font-size: 1.8rem;
+  }
+
+  .appointment-subtitle {
+    font-size: 1rem;
+  }
+
+  .appointment-form {
+    padding: 1.5rem 1rem;
   }
 
   .form-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-control,
+  .form-select {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .submit-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
   }
 }
 
-/* Animation */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .appointment-title {
+    font-size: 1.5rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.appointment-card {
-  animation: fadeIn 0.5s ease-out;
+  .appointment-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .form-label {
+    font-size: 0.9rem;
+  }
+
+  .error-message {
+    font-size: 0.8rem;
+  }
+
+  .success-message {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
 }
