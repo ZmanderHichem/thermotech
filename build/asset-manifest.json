@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.264ef61e.css",
+    "main.js": "/static/js/main.171f1384.js",
+    "static/js/453.ad6eb26e.chunk.js": "/static/js/453.ad6eb26e.chunk.js",
+    "static/media/affichethermotech.png": "/static/media/affichethermotech.a598e5c6e1911351e67b.png",
+    "static/media/logo123.png": "/static/media/logo123.e9e9bb752196d8037737.png",
+    "static/media/refregerateur.jpg": "/static/media/refregerateur.dcf1969bd9c138ce8db6.jpg",
+    "static/media/machinereparation.jpg": "/static/media/machinereparation.c6d00fcadf43b72716c0.jpg",
+    "static/media/logo-thermotech.png": "/static/media/logo-thermotech.77f2db32936f2a8bd3a4.png",
+    "index.html": "/index.html",
+    "main.264ef61e.css.map": "/static/css/main.264ef61e.css.map",
+    "main.171f1384.js.map": "/static/js/main.171f1384.js.map",
+    "453.ad6eb26e.chunk.js.map": "/static/js/453.ad6eb26e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.264ef61e.css",
+    "static/js/main.171f1384.js"
+  ]
+}

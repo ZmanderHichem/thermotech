@@ -81,16 +81,36 @@ const RendezVous = () => {
         timestamp: new Date()
       });
 
-      // Send confirmation email
-      const emailParams = {
+      // Send confirmation email to client
+      const clientEmailParams = {
         to_email: formData.email,
         to_name: `${formData.firstName} ${formData.lastName}`,
         message: "Votre rendez-vous est en cours de traitement. Nous vous contacterons prochainement.",
         type_machine: formData.typeMachine,
         model: formData.model,
+        from_email: "contact@thermotech.tn",
+        from_name: "Thermotech"
       };
 
-      await emailjs.send('service_9frimjq', 'template_u8192kh', emailParams, '045MKDooB2Thc1kTN');
+      // Send notification email to admin
+      const adminEmailParams = {
+        to_email: "contact@thermotech.tn",
+        to_name: "Administrateur Thermotech",
+        message: `Nouveau rendez-vous reçu de ${formData.firstName} ${formData.lastName}`,
+        type_machine: formData.typeMachine,
+        model: formData.model,
+        client_email: formData.email,
+        client_phone: formData.phone,
+        client_address: `${formData.address}, ${formData.city}`,
+        from_email: "contact@thermotech.tn",
+        from_name: "Thermotech"
+      };
+
+      // Send both emails
+      await Promise.all([
+        emailjs.send('service_thermotech', 'template_u8192kh', clientEmailParams, '045MKDooB2Thc1kTN'),
+        emailjs.send('service_thermotech', 'template_u8192kh', adminEmailParams, '045MKDooB2Thc1kTN')
+      ]);
 
       setSuccessMessage('Rendez-vous enregistré avec succès ! Vous recevrez bientôt un email de confirmation.');
       setFormData({
